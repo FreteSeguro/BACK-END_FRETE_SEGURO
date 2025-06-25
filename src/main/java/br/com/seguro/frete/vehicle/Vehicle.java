@@ -59,7 +59,7 @@ public class Vehicle {
 
     //@OneToMany(mappedBy = "vehicle")
     @Column(name = "users")
-    private Set<Long> users = new HashSet<>();
+    private Set<Long> users = new HashSet<>();//TODO: INVERTER POIS É USUARIOS QUE POSSUE LISTA DE VEICULOS 
 
     @OneToOne(mappedBy = "vehicle")
     private Gps gps;
