@@ -1,12 +1,10 @@
 package br.com.seguro.frete.vehicle;
 
 import java.time.Instant;
-import java.util.HashSet;
-import java.util.Set;
 
 import br.com.seguro.frete.enums.VehicleType;
 import br.com.seguro.frete.gps.Gps;
-//import br.com.seguro.frete.user.User;
+import br.com.seguro.frete.user.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -14,7 +12,8 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -57,9 +56,9 @@ public class Vehicle {
     @Column(name = "created_at")
     private Instant createdAt = Instant.now();
 
-    //@OneToMany(mappedBy = "vehicle")
-    @Column(name = "users")
-    private Set<Long> users = new HashSet<>();//TODO: INVERTER POIS É USUARIOS QUE POSSUE LISTA DE VEICULOS 
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private User user;
 
     @OneToOne(mappedBy = "vehicle")
     private Gps gps;

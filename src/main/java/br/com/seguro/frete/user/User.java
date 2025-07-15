@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import br.com.seguro.frete.enums.Role;
-//import br.com.seguro.frete.vehicle.Vehicle;
+import br.com.seguro.frete.vehicle.Vehicle;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
@@ -21,7 +21,7 @@ import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
-@Table(name = "user")
+@Table(name = "usuario")
 @Data
 @EqualsAndHashCode(of = "id")
 @AllArgsConstructor
@@ -53,8 +53,7 @@ public class User {
     @Column(name = "created_at")
     private Instant createdAt = Instant.now();
 
-    //@OneToMany(mappedBy = "user")
-    @Column(name = "vehicles")
-    private Set<Long> vehicles = new HashSet<>();
+    @OneToMany(mappedBy = "user")
+    private Set<Vehicle> vehicles = new HashSet<>();
 
 }

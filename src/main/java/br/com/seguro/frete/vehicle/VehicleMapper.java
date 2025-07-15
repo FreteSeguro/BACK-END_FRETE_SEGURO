@@ -1,8 +1,10 @@
 package br.com.seguro.frete.vehicle;
 
+import br.com.seguro.frete.user.User;
+
 public class VehicleMapper {
 
-    public static Vehicle toEntity(VehicleCreateDTO dto) {
+    public static Vehicle toEntity(VehicleCreateDTO dto, User user) {
         Vehicle vehicle = new Vehicle();
         vehicle.setPlaca(dto.placa());
         vehicle.setMarca(dto.marca());
@@ -10,6 +12,7 @@ public class VehicleMapper {
         vehicle.setAno(dto.ano());
         vehicle.setCor(dto.cor());
         vehicle.setTipo(dto.tipo());
+        vehicle.setUser(user);
         return vehicle;
     }
 

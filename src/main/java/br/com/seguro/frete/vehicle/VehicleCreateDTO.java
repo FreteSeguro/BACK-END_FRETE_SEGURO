@@ -9,6 +9,7 @@ public record VehicleCreateDTO(
     String modelo,
     Integer ano,
     String cor,
-    VehicleType tipo
+    VehicleType tipo,
+    Long user
 ) {
 }

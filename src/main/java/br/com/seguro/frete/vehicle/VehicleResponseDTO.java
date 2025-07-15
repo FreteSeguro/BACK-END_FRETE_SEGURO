@@ -10,7 +10,6 @@ public record VehicleResponseDTO(
     Integer ano,
     String cor,
     VehicleType tipo
-    //TODO: ADICIONAR USUARIOS
 ) {
     
 }
