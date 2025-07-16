@@ -28,7 +28,7 @@ public class VehicleService {
         return vehicles.stream()
             .map(VehicleMapper::toResponseDTO)
             .collect(Collectors.toList());
-    }
+    } //TODO: muda depois para ser apenas uma listagem normal sem ser paginada
 
     public void updateVehicle(Long id, VehicleCreateDTO dto) {
         Vehicle vehicle = findVehicleByIdOrThrow(id);
@@ -46,6 +46,11 @@ public class VehicleService {
         return vehicles.stream()
             .map(VehicleMapper::toResponseDTO)
             .collect(Collectors.toList());
+    }
+
+    public VehicleResponseDTO findVehicleById(Long id) {
+        Vehicle vehicle = findVehicleByIdOrThrow(id);
+        return VehicleMapper.toResponseDTO(vehicle);
     }
 
     public void deleteVehicle(Long id) {
