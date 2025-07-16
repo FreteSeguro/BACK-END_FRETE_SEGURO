@@ -11,8 +11,9 @@ public class UserService {
     
     private final UserRepository userRepository;
 
-    public User createUser(UserCreateDTO dto) {
+    public User createUser(UserCreateDTO dto, String encodedPassword) {
         User user = UserMapper.toEntity(dto);
+        user.setPassword(encodedPassword);
         return userRepository.save(user);
     }
 

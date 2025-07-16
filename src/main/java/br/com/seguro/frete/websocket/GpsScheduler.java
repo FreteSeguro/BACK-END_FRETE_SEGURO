@@ -11,7 +11,7 @@ public class GpsScheduler {
 
     private final GpsWebSocketHandler gpsWebSocketHandler;
 
-    @Scheduled(fixedRate = 5000)
+    @Scheduled(fixedRate = 10000)
     public void sendGpsData() throws Exception {
         String gpsData = "GPS Data at " + System.currentTimeMillis();
         System.out.println("📡 Enviando: " + gpsData);

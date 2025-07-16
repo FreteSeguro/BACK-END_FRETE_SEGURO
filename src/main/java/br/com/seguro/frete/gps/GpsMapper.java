@@ -31,7 +31,7 @@ public class GpsMapper {
                 gps.getVehicle().getAno(),
                 gps.getVehicle().getCor(),
                 gps.getVehicle().getTipo()
-            )//TODO:: retornar entidade
+            )
         );
     }
 
