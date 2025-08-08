@@ -45,3 +45,19 @@ ALTER TABLE gps
 
 ALTER TABLE vehicle
     ADD CONSTRAINT FK_VEHICLE_ON_USER FOREIGN KEY (user_id) REFERENCES usuario (user_id);
+
+INSERT INTO usuario (
+    name,
+    password,
+    email,
+    phone,
+    role,
+    created_at
+) VALUES (
+    'Admin Master',
+    '$2a$10$rTB8bYyHnhMvRUfD1LekmuMlSzadS.p7Wt8BBYxD9W8NBpF91MEo2',
+    'a@e.com',
+    '(11) 99999-9999',
+    'ADMIN',
+    NOW()
+);
