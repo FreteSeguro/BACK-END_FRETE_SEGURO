@@ -54,10 +54,10 @@ INSERT INTO usuario (
     role,
     created_at
 ) VALUES (
-    'Admin Master',
+    'Thiago Paulo',
     '$2a$10$rTB8bYyHnhMvRUfD1LekmuMlSzadS.p7Wt8BBYxD9W8NBpF91MEo2',
-    'a@e.com',
-    '(11) 99999-9999',
+    'utracking@email.com',
+    '(84) 99617-1333',
     'ADMIN',
     NOW()
 );
@@ -74,21 +74,21 @@ INSERT INTO vehicle (
 ) VALUES 
 (
     'ABC-1234',
-    'Toyota',
-    'Corolla',
-    2022,
-    'Prata',
+    'Volkswagen',
+    'Fox',
+    2012,
+    'Branco',
     'CARRO',
     NOW(),
     1
 ),
 (
     'XYZ-9876',
-    'Honda',
-    'Civic',
-    2021,
-    'Preto',
-    'CARRO',
+    'Yamaha',
+    'Crosser',
+    2015,
+    'Branco',
+    'MOTOCICLETA',
     NOW(),
     1
 );
