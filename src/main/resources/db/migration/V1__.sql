@@ -61,3 +61,34 @@ INSERT INTO usuario (
     'ADMIN',
     NOW()
 );
+
+INSERT INTO vehicle (
+    placa,
+    marca,
+    modelo,
+    ano,
+    cor,
+    tipo,
+    created_at,
+    user_id
+) VALUES 
+(
+    'ABC-1234',
+    'Toyota',
+    'Corolla',
+    2022,
+    'Prata',
+    'CARRO',
+    NOW(),
+    1
+),
+(
+    'XYZ-9876',
+    'Honda',
+    'Civic',
+    2021,
+    'Preto',
+    'CARRO',
+    NOW(),
+    1
+);
